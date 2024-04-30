@@ -6,4 +6,6 @@ install:
 convert:
 	java -jar $(JAR) --input src --inputType las --output dst --crs 6669 --debug
 
+upload:
+	aws s3 cp dst/ s3://us-west-2.opendata.source.coop/smartmaps/nagasaki-mago/
 
